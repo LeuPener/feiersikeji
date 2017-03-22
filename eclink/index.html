@@ -10,6 +10,7 @@
 <meta name="author" content="design by fierce technology" />
 <link rel="stylesheet" type="text/css" href="templets/default/demo/css/index.css"/>
 <link rel="stylesheet" type="text/css" href="templets/default/demo/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="templets/default/demo/css/swiper-3.4.2.min.css"/>
 
 <link rel="stylesheet" type="text/css" href="templets/default/demo/css/phonestyle.css"/>
 <link rel="stylesheet" type="text/css" href="templets/default/demo/css/responsive-nav.css"/>
@@ -18,6 +19,22 @@
 <script type="text/javascript" src="templets/default/demo/js/begin.js"></script>
 <script type="text/javascript" src="templets/default/demo/js/index.Slide.js"></script>
 <script type="text/javascript" src="templets/default/demo/js/responsive-nav.js"></script>
+  <script type="text/javascript" src="templets/default/demo/js/swiper-3.4.2.min.js"></script>
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 25%;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+    }
+    #feedback_form span{display:none;}
+  </style>
 <!--<script type="text/javascript" src="/templets/default/demo/js/jquery.qrcode.min.js"></script>
     <script type="text/javascript">
 jQuery(function () {
@@ -66,7 +83,9 @@ jQuery(function () {
       });
   </script>
   <!--手机导航 end-->
+
   <div class="top">
+
     <div class="top_m ww"> 整合营销官网-中国整合网站营销专家为您打造营销型网站，营销型网站建设第一品牌!
       <div class="fr"><a href="a/lianxiwomen/lianxiwomen.html" target="_blank">联系我们</a>| <a href="a/bangzhuzhongxin/bangzhuzhongxin.html" target="_blank">帮助中心</a>| <a href="http://wpa.qq.com/msgrd?v=3&uin=79495292&site=qq&menu=yes" target="_blank">在线专家咨询</a> </div>
     </div>
@@ -119,6 +138,29 @@ $(function(){
   </div>
 </div> 
 <!---head--->
+<!--手机版轮播图 start-->
+<div class="swiper-container mob_banner">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background-image:url(templets/default/demo/images/banner_mob02.jpg)"></div>
+    <div class="swiper-slide" style="background-image:url(templets/default/demo/images/banner_mob01.jpg)"></div>
+
+  </div>
+  <div class="swiper-pagination swiper-pagination-white"></div>
+  <div class="swiper-button-next swiper-button-white"></div>
+  <div class="swiper-button-prev swiper-button-white"></div>
+</div>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30,
+        effect: 'fade'
+    });
+</script>
+<!--手机版轮播图 end-->
 <div id="qrCodeDiv" align="center"></div>
 <div class="banner pr" id="banner">
   <div class="d1" style="background:url('templets/default/demo/images/bannerbg1.png') left center no-repeat">
@@ -137,7 +179,7 @@ $(function(){
   </div>
 
   <div class="d1" style="background:#f7a240">
-    <div class="ww pr silde" style="background:url(/templets/demo/images/borange.png) left center no-repeat">
+    <div class="ww pr silde" style="background:url(templets/default/demo/images/borange.png) left center no-repeat">
       <div class="iprint3_1 rpa"></div>
       <div class="iprint3_2 rpa"></div>
       <div class="iprint3_3 rpa"></div>

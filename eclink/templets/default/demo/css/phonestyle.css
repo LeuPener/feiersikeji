@@ -1,5 +1,7 @@
 @charset "utf-8";
-
+.mob_banner{
+    display: none;
+}
 @media (max-width: 768px) {
     .mob-nav{
         display: block;
@@ -84,6 +86,7 @@
 
     .whyno1_m{
         width: 100%;
+        display: none;
         border:none;
     }
 
@@ -183,7 +186,7 @@
     }
 
     .case_t .c_span2{
-        padding: 0 3rem;
+        padding: 0 2rem;
     }
 
     .blk_18{
@@ -192,7 +195,7 @@
         text-align: center;
     }
 
-    .blk_18 .LeftBotton, .blk_18 .RightBotton, .pla, .advantages_m_t, .aul, .advantages_m_2img, .dis-mt{
+    .blk_18 .LeftBotton, .blk_18 .RightBotton, .pla, .advantages_m_t, .aul{
         display: none;
     }
     .amdl dt{
@@ -231,7 +234,7 @@
         display: none;
     }
 
-    .advantages_m_3, .advantages_m_4, .team_tul{
+    .advantages_m_3,  .team_tul, .am1dl4{
         display: none;
     }
 
@@ -393,6 +396,21 @@
         float: inherit;
     }
 
+    .mob_banner{
+        margin-top: 2rem;
+        display: block;
+    }
+
+    .am1dl1, .am1dl2{
+        display: none;
+    }
+
+
+    .advantages_m_2 .advantages_m_2img, .advantages_m_2img{
+        width: 95%;
+        margin:0 auto 2rem auto;
+
+    }
 
 
 
