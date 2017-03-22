@@ -1,0 +1,403 @@
+@charset "utf-8";
+
+@media (max-width: 768px) {
+    .mob-nav{
+        display: block;
+    }
+    .top, .phone, .nav, .banner, .ourservice_m, .whyno2_m_1{
+        display: none;
+    }
+    .ww{
+        width: 100%;
+    }
+
+    .logo img{
+        width: 80%;
+        margin-top:-2.5rem;
+        margin-bottom: 1.5rem;
+        position:absolute;
+        z-index: 9999
+    }
+    .h_con{
+        height:auto;
+    }
+
+    .phone-nav{
+        position: relative!important;
+        right: 0;
+    }
+
+    .ourservice{
+        margin:2rem auto;
+    }
+
+    .ourservice_t strong{
+        font-size: 1.6rem;
+    }
+
+    .ourservice_t p{
+        font-size: 1.2rem;
+        padding: 0 3rem;
+    }
+
+    .why_t span, .why_t strong, .why_h3 span, .why_h3 strong, .why_h3 em, .rpa {
+        position: inherit;
+        top:inherit;
+        left:inherit;
+        right:inherit;
+        bottom:inherit;
+    }
+
+    .why{
+        height: auto;
+        background: none;
+    }
+
+    .why_t span, .why_t strong{
+        font-size: 1.4rem;
+    }
+
+    .why_t{
+        height:auto;
+        padding-left: 3%;
+    }
+
+    .why_h3 strong{
+
+        font-size: 1.4rem;
+    }
+
+    .why_h3{
+        padding-left: 3%;
+        height:auto;
+        font-size: 1.4rem;
+    }
+
+    .why_h3 span img{
+        width: 5%;
+    }
+
+    .why_h3 em{
+       display: inline-block;
+       font-size: 1.2rem;
+    }
+
+    .whyno1_m{
+        width: 100%;
+        border:none;
+    }
+
+    .whyno1_m dl{
+        width: auto;
+    }
+
+    .whyno1_m .wdl3 .wdd1, .whyno1_m .wdl3 .wdd2{
+        border: none;
+    }
+    .whyno1_m .wdd2{
+        border: none;
+    }
+
+    .whyno1_m .wdd1{
+        border: none;
+    }
+
+    .whyno1_m .wdd1{
+        display: none;
+    }
+
+    .whyno2_m_2_1{
+        margin: inherit;
+        padding-left: 3%;
+    }
+
+    .whyno2_m_2_2{
+        margin: inherit;
+        padding-left: 3%;
+    }
+
+    .whyno2_m_2_s, .whyno2_m_2_b{
+        font-size: 1.4rem;
+    }
+    .how{
+        height:auto;
+        background: none;
+    }
+
+    .how_m{
+        height: auto;
+        background: none;
+    }
+    .how_m1{
+        margin: inherit;
+        font-size: 1.4rem;
+    }
+
+    .how_m2{
+        margin: inherit;
+        font-size: 1.4rem;
+    }
+
+    .how_m5{
+        display: none;
+    }
+
+    .how_m3, .how_m4, .how_m1, .how_m2{
+        display: none;
+    }
+
+    .how_m6{
+        background-size:95%;
+    }
+
+    .how_m6 span{
+        font-size: 1.4rem;
+    }
+    .how_m6 p{
+        padding:0 2rem;
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .how_m7 strong{
+        margin: inherit;
+        font-size: 1.4rem;
+        line-height: 2rem;
+
+    }
+
+    .how_m7{
+        height: auto;
+        margin: inherit;
+        padding: 0 2rem;
+        background: none;
+
+    }
+
+    .hdl1, .hdl2, .hdl3, .hdl4, .banner1{
+        display: none;
+    }
+
+    .case_t .c_span1, .case_t .c_span2{
+        font-size: 1.4rem;
+    }
+
+    .case_t .c_span2{
+        padding: 0 3rem;
+    }
+
+    .blk_18{
+        width: 75%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .blk_18 .LeftBotton, .blk_18 .RightBotton, .pla, .advantages_m_t, .aul, .advantages_m_2img, .dis-mt{
+        display: none;
+    }
+    .amdl dt{
+        height: auto;
+    }
+
+    .advantages_m_2{
+        height: auto;
+        background: none;
+
+    }
+
+    .advantages{
+        height: auto;
+    }
+
+    .advantages_m_1{
+        height: auto;
+    }
+
+    .advantages_m_4{
+        height: auto;
+        background: none;
+    }
+
+    .amdl dd{
+        height: auto;
+        line-height: 2rem;
+    }
+
+    .amdl span strong{
+        font-size: 1.2rem;
+    }
+
+    .amdl em{
+        display: none;
+    }
+
+    .advantages_m_3, .advantages_m_4, .team_tul{
+        display: none;
+    }
+
+    .team_t{
+        padding: 0 1rem;
+    }
+
+    .team_t strong{
+        margin-top: 2rem;
+        font-size: 1.4rem;
+    }
+
+    .team_t span{
+        font-size: 1.2rem;
+    }
+    .t_span2{
+        margin: inherit;
+    }
+    .team_t p{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .team{
+        height: auto;
+    }
+
+    .banner2, .company, .signed, .information{
+        display: none;
+    }
+
+    .feedback{
+        width: 95%;
+        margin: auto;
+        float: inherit;
+    }
+
+    .f_nav, .f_logo, #roll{
+        display: none;
+    }
+
+    .footer_m{
+        background: none;
+    }
+
+
+    .ready{
+        display: none;
+    }
+
+    .inquiry_m{
+        height: auto;
+        margin-top: 2rem;
+        background: none;
+    }
+
+    .inquiry{
+        height: auto;
+    }
+
+    .inquiry_m1, .inquiry_m2, .inquiry_m3{
+        font-weight: normal;
+        font-size: 1.4rem;
+    }
+
+    .inquiry_m3, .inquiry_m4, .inquiry_m5, .inquiry_m6{
+        color: #004ea2;
+    }
+    .inquiry_m7, .essential, .system, .indeed, .inquiry_m{
+        display: none;
+    }
+
+    .feature6_t strong, .show10_t strong{
+        font-size: 1.4rem;
+    }
+
+    .feature6_m dl dd{
+        height: auto;
+    }
+
+    .show10_m dl{
+        width: 48.5%;
+        height: 223px;
+    }
+
+    .show10_m dl dd{
+        white-space: nowrap;
+    }
+    .flowpath{
+        display: none;
+    }
+
+    .winner{
+        display: none;
+    }
+
+    .vi_m_t{
+        height: auto;
+        text-align: center;
+        background: none;
+    }
+
+    .vi1, .vi2, .vi3, .vi4{
+        font-size: 1.2rem;
+    }
+    .vitrait_t{
+        width: 90%;
+        height:105px;
+    }
+
+    .dil, .vitrait_t strong{
+        font-size: 1.2rem;
+    }
+
+    .vitrait_m, .viservices1, .vsdl2{
+        display: none;
+    }
+    .viquote{
+        height: auto;
+    }
+
+    .vi5{
+        width: 80%;
+        margin: auto;
+    }
+
+    .bottom_nav a{
+        width: 33%;
+    }
+
+    .about p{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .aht{
+        background-size: 90%;
+        margin: 0;
+    }
+
+    .coreteam_t strong{
+        font-size: 1.4rem;
+    }
+
+    .coreteam_boss{
+        height:360px;
+        background-size: 90%;
+    }
+
+    .article_center{
+        width: 100%;
+    }
+
+    .a_c_left{
+        display: none;
+    }
+    .a_c_right{
+        width: 95%;
+        margin: 0 auto;
+        float: inherit;
+    }
+
+
+
+
+
+
+
+
+}

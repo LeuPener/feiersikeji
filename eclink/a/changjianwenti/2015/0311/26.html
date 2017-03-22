@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=3.0"/>
+<title>让IIS支持Flv的详细设置方法—整合营销官网-中国整合网站营销专家</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<script type="text/javascript" src="../../../../templets/default/demo/js/jquery.js"></script>
+<script type="text/javascript" src="../../../../templets/default/demo/js/slippage.js"></script>
+<script type="text/javascript" src="../../../../templets/default/demo/js/jquery.jcarousellite.js"></script>
+<link rel="stylesheet" type="text/css" href="../../../../templets/default/demo/css/index.css"/>
+<link rel="stylesheet" type="text/css" href="../../../../templets/default/demo/css/style.css"/>
+</head>
+
+<body>
+
+<!---head--->
+
+<!--<script type="text/javascript" src="../../templets/default/demo/js/index.js"></script>-->
+<div class="head">
+  <div class="top">
+    <div class="top_m ww"> 整合营销官网-中国整合网站营销专家为您打造营销型网站，营销型网站建设第一品牌!
+      <div class="fr"><a href="../../../lianxiwomen/lianxiwomen.html" target="_blank">联系我们</a>| <a href="../../../bangzhuzhongxin/bangzhuzhongxin.html" target="_blank">帮助中心</a>| <a href="http://wpa.qq.com/msgrd?v=3&uin=79495292&site=qq&menu=yes" target="_blank">在线专家咨询</a> </div>
+    </div>
+  </div>
+  <div class="h_con ww">
+    <div class="logo fl"> <a href="../../../../index.html" alt="整合营销官网-中国整合网站营销专家" title="整合营销官网-中国整合网站营销专家"><img src="../../../../templets/default/demo/images/logo.png"/></a> </div>
+    <div class="phone fr"> <strong>400-660-7096</strong>
+      <p>想让企业在互联网上做得更好的企业家的不二之选！</p>
+      <p>实战 专业 落地 高效&nbsp;&nbsp;</p>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="nav_2014 ww">
+      <ul>
+        
+		
+		<li name="/"><span><a title="" href="../../../../index.html" alt="网站首页">网站首页</a></span> </li>
+		
+		
+        <li name="/a/building/"><span><a title="营销型网站建设" href="../../../building/building.html" alt="营销型网站建设">营销型网站建设</a></span> </li>
+		
+        <li name="/a/visual/"><span><a title="整站优化排名" href="../../../visual/visual.html" alt="整站优化排名">整站优化排名</a></span> </li>
+		
+        <li name="/a/into/"><span><a title="关键词快速排名" href="../../../into/into.html" alt="关键词快速排名">关键词快速排名</a></span> </li>
+		
+        <li name="/a/case/"><span><a title="成功案例" href="../../../case/case.html" alt="成功案例">成功案例</a></span> </li>
+		
+        <li name="/a/plan/"><span><a title="营销方案" href="../../../plan/plan.html" alt="营销方案">营销方案</a></span> </li>
+		
+        <li name="/a/news/"><span><a title="新闻资讯" href="../../../news/news.html" alt="新闻资讯">新闻资讯</a></span> </li>
+		
+        <li name="/a/guanyuwomen/"><span><a title="关于我们" href="../../../guanyuwomen/guanyuwomen.html" alt="关于我们">关于我们</a></span> </li>
+		
+        <script>
+$(function(){
+	var texts = $(".nav_2014 li").attr('name');
+	var loc = window.location;
+	$(".nav_2014 li").each(function(index, element) {
+       var location =  $(this).attr('name');
+	   if(loc == location){
+			$(this).addClass("hover");   
+	   }
+    });
+})
+</script>
+      </ul>
+    </div>
+  </div>
+</div>
+<!---head--->
+<div class="article_center">
+  <div class="hot">您现在的位置：<a href='../../../../index.html'>主页</a> > <a href='../../../news/news.html'>新闻资讯</a> > <a href='../../changjianwenti.html'>常见问题</a> >  </div>
+  <div class="a_read_left">
+    <div class="a_read_left_m">
+      <h1>让IIS支持Flv的详细设置方法</h1>
+      <div class="n_tit"> <span>人气:<script src="../../../../plus/count.php�view=yes&aid=26&mid=1.html" type='text/javascript' language="javascript"></script></span> <span>发表时间：2015-03-11 01:42</span> </div>
+      <hr />
+      <div id="cntrBody"><div id="art_demo">
+	<span style="font-size: 14px;">这次一个客户站内有一段flv广告要放，传到空间说找不到flv这个文件，原来大多数空间都不支持这种格式，但是为了一小段视频专门买flv空间有点不合适，怎么办呢？下面有个不错的方法，大家可以试试！</span></div>
+<div class="blank3">
+	&nbsp;</div>
+<div id="con_all">
+	<div id="con_da1">
+		<span style="font-size: 14px;">国内大多都是Win2003的主机，FLV格式文件上传服务器后不能播放，默认是没有指定输出FLV这种格式的虽然FTP里面可以看见，但无法通过http访问,也就无法播放了。原因是，WIN2003加强了IIS6的MIME验证，一切未注册扩展文件格式统统显示404错误。手动在IIS得站点属性中的HTTP头-&gt;MIME添加MIME影射关系，MIME类型: video/x-flv 扩展名:.flv，即可通过Flash7+客户端Load进来播放。</span></div>
+</div>
+<div id="art_content">
+	<span style="font-size: 14px;">&ldquo;虚拟主机都不支持Flv格式文件&rdquo;的问题：比如你的Flv文件名称是1.flv,在虚拟主机上建一个名为&ldquo;1.flv&rdquo;的目录，在此目录下放你的Flv格式文件，将其改名为：index.htm,这样就行了，播放器中的文件名地址保持原样不动。<br />
+	<br />
+	<strong>让IIS支持Flv的详细设置方法：</strong><br />
+	IIS--&gt;网站---&gt;属性---&gt;HTTP性能---&gt;MIME类型---&gt;新建:<br />
+	扩展名: .flv(注意flv前面有个.)<br />
+	MIME类型:flv-application/octet-stream<br />
+	<strong>如下图所示:</strong><br />
+	<img src="../../../../uploads/allimg/150310/1-150310133254114.gif" style="border-width: 0px; border-style: solid;" /><br />
+	<strong>你必须设置一下内容&nbsp;</strong><br />
+	<br />
+	1：在&ldquo;Web服务扩展&rdquo;中Active Server Pages,Internet 数据连接器，RPC代理服务扩展，以及在服务器端的包含文件都必须置为允许状况<br />
+	<br />
+	2：&ldquo;网站&rdquo;－》属性－》主目录－》配置－》选项－》启动父路径<br />
+	<br />
+	3：&ldquo;网站&rdquo;－》属性－》服务－》在隔离模式中选中&ldquo;以IIS5.0隔离模式运行WWW服务&rdquo;<br />
+	<br />
+	4：开始－》程序－》管理工具－》服务.找到RPC服务，双击－》登录－》允许服务与桌面交互<br />
+	<br />
+	这样在windows2003下就可以运行asp的Server.CreateObject(&quot;WScript.Shell&quot;)<br />
+	<br />
+	本来我是想用asp.net做这个程序，在asp.netzh中也是一直存在这个问题。所以该用asp<br />
+	在asp可以实现功能了。我就没有在asp.net下做，诸位如果有兴趣可以试一试！<br />
+	<br />
+	<br />
+	2:解决办法：<br />
+	<br />
+	① 删除或更名以下危险的ASP组件：<br />
+	Wscript.Shell、Wscript.Shell.1、Wscript.Network、Wscript.Network.1、adodb.stream、Shell.application<br />
+	开始-------&gt;运行---------&gt;Regedit，打开注册表编辑器，按Ctrl+F查找，依次输入以上Wscript.Shell等组件名称以及相应的ClassID，然后进行删除或者更改名称(这里建议大家更名，如果有部分网页ASP程序利用了上面的组件的话呢，只需在将写ASP代码的时候用我们更改后的组件名称即可正常使用。当然如果你确信你的ASP程序中没有用到以上组件，还是直<br />
+	接删除心中踏实一些^_^,按常规一般来说是不会做到以上这些组件的。删除或更名后，iisreset重启IIS后即可升效。)<br />
+	[注意：由于Adodb.Stream这个组件有很多网页中将用到，所以如果你的服务器是开虚拟主机的话，建议酢情处理。]<br />
+	<br />
+	② 关于 File System Object (classid:0D43FE01-F093-11CF-8940-00A0C9054228)即常说的FSO的安全问题，如果您的服务器必需要用到FSO的话，(部分虚拟主机服务器一般需开FSO功能)可以参照本人的另一篇关于FSO安全解决办法的文章:Microsoft Windows 2000 Server FSO 安全隐患解决办法。如果您确信不要用到的话，可以直接反注册此组件即可。<br />
+	<br />
+	③ 直接反注册、卸载这些危险组件的方法：(实用于不想用①及②类此类烦琐的方法)<br />
+	<br />
+	卸载wscript.shell对象，在cmd下或直接运行：regsvr32 /u %windir%\system32\WSHom.Ocx<br />
+	<br />
+	卸载FSO对象,在cmd下或直接运行：regsvr32.exe /u %windir%\system32\scrrun.dll<br />
+	<br />
+	卸载stream对象,在cmd下或直接运行： regsvr32 /s /u &quot;C:\Program Files\Common Files\System\ado\msado15.dll&quot;<br />
+	<br />
+	如果想恢复的话只需要去掉 /U 即可重新再注册以上相关ASP组件例如：regsvr32.exe %windir%\system32\scrrun.dll<br />
+	<br />
+	④ 关于Webshell中利用set domainObject = GetObject(&quot;WinNT://.&quot;)来获取服务器的进程、服务以及用户等信息的防范，大家可以将服务中的Workstation[提供网络链结和通讯]即Lanmanworkstation服务停止并禁用即可。此处理后，Webshell显示进程处将为空白。<br />
+	<br />
+	3 按照上1、2方法对ASP类危险组件进行处理后，用阿江的asp探针测试了一下,&quot;服务器CPU详情&quot;和&quot;服务器操作系统&quot;根本查不到,内容为空白的。再用海洋测试Wsript.Shell来运行cmd命令也是提示Active无法创建对像。大家就都可以再也不要为ASP木马危害到服务器系统的安全而担扰了。<br />
+	<br />
+	当然服务器安全远远不至这些，这里为大家介绍的仅仅是本人在处理ASP木马、Webshell上的一些心得体会。在下一篇中将为大家介绍如何简简单单的防止别人在服务器上执行如net user之类的命令，防溢出类攻击得到cmdshell，以及执行添加用户、改NTFS设置权限到终端登录等等的最简单有效的防范方法。</span></div>
+<div>
+	&nbsp;</div>
+</div>
+      <div class="showfenye"></div>
+      <div class="gduo"> <span style="float:left;"> 上一篇：<a href='../0310/24.html' class='a'>几大搜索引擎的提交入口</a> </span> <span style="float:right;">下一篇：<a href='#' class='b'>没有了</a>  </span> </div>
+      <div class="Related">
+        <h4>相关资讯</h4>
+        <ul>
+          <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+    <td width='50%'>
+<li><a href="../0310/23.html" title="新站考核期多久？内页什么时间开">新站考核期多久？内页什么时间开</a></li>
+    </td>
+    <td width='50%'>
+<li><a href="../0310/24.html" title="几大搜索引擎的提交入口">几大搜索引擎的提交入口</a></li>
+    </td>
+    </tr>
+<tr>
+    <td width='50%'>
+<li><a href="26.html" title="让IIS支持Flv的详细设置方法">让IIS支持Flv的详细设置方法</a></li>
+    </td>
+    <td width='50%'>
+    </td>
+    </tr>
+    </table>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="a_read_right">
+    <div class="Ranking">
+      <h4>推荐热门文章</h4>
+      <ul>
+        <ul>
+          <li><a href="../../../wangzhanjianshe/2015/0310/17.html" alt="如何避免网站收录带inde" title="如何避免网站收录带inde">如何避免网站收录带inde...</a></li>
+<li><a href="../../../kehujianzheng/2015/0310/10.html" alt="上海翰玺商工贸有限公司" title="上海翰玺商工贸有限公司">上海翰玺商工贸有限公司...</a></li>
+<li><a href="../../../gongsidongtai/2015/0310/11.html" alt="不要恐惧，手把手教你“" title="不要恐惧，手把手教你“">不要恐惧，手把手教你“...</a></li>
+<li><a href="../0310/23.html" alt="新站考核期多久？内页什" title="新站考核期多久？内页什">新站考核期多久？内页什...</a></li>
+<li><a href="../../../yingxiaoxingwangzhan/2015/0310/22.html" alt="营销型网站建设策划的八" title="营销型网站建设策划的八">营销型网站建设策划的八...</a></li>
+<li><a href="../../../wangzhanjianshe/2015/0310/21.html" alt="模板建站到底好不好？" title="模板建站到底好不好？">模板建站到底好不好？...</a></li>
+<li><a href="../../../wangzhanjianshe/2015/0310/16.html" alt="购买域名、空间的注意事" title="购买域名、空间的注意事">购买域名、空间的注意事...</a></li>
+<li><a href="../../../wangzhanjianshe/2015/0310/20.html" alt="网站建设时域名该怎样选" title="网站建设时域名该怎样选">网站建设时域名该怎样选...</a></li>
+<li><a href="../../../gongsidongtai/2015/0310/14.html" alt="百度十年产品经验总结：" title="百度十年产品经验总结：">百度十年产品经验总结：...</a></li>
+<li><a href="../../../wangzhanjianshe/2015/0310/19.html" alt="什么样的网站更容易吸引" title="什么样的网站更容易吸引">什么样的网站更容易吸引...</a></li>
+
+        </ul>
+      </ul>
+    </div>
+    <div class="Ranking Latest">
+      <h4>最新资讯文章</h4>
+      <ul>
+        <ul>
+          <li><a href="../../../kehujianzheng/2015/0310/9.html" alt="温州德克家居装饰材料有" title="温州德克家居装饰材料有">温州德克家居装饰材料有...</a></li>
+<li><a href="../../../kehujianzheng/2015/0310/10.html" alt="上海翰玺商工贸有限公司" title="上海翰玺商工贸有限公司">上海翰玺商工贸有限公司...</a></li>
+<li><a href="../../../gongsidongtai/2015/0310/11.html" alt="不要恐惧，手把手教你“" title="不要恐惧，手把手教你“">不要恐惧，手把手教你“...</a></li>
+<li><a href="../../../gongsidongtai/2015/0310/12.html" alt="百度站内搜索开通流量提" title="百度站内搜索开通流量提">百度站内搜索开通流量提...</a></li>
+<li><a href="../../../gongsidongtai/2015/0310/13.html" alt="推荐四款功能强大的免费" title="推荐四款功能强大的免费">推荐四款功能强大的免费...</a></li>
+<li><a href="../../../gongsidongtai/2015/0310/14.html" alt="百度十年产品经验总结：" title="百度十年产品经验总结：">百度十年产品经验总结：...</a></li>
+<li><a href="../../../wangzhanjianshe/2015/0310/15.html" alt="网站备案时不用关闭网站" title="网站备案时不用关闭网站">网站备案时不用关闭网站...</a></li>
+<li><a href="../../../wangzhanjianshe/2015/0310/16.html" alt="购买域名、空间的注意事" title="购买域名、空间的注意事">购买域名、空间的注意事...</a></li>
+<li><a href="../../../wangzhanjianshe/2015/0310/17.html" alt="如何避免网站收录带inde" title="如何避免网站收录带inde">如何避免网站收录带inde...</a></li>
+<li><a href="../../../wangzhanjianshe/2015/0310/18.html" alt="做网站的一些感触 3步简单" title="做网站的一些感触 3步简单">做网站的一些感触 3步简单...</a></li>
+
+        </ul>
+      </ul>
+    </div>
+  </div>
+</div>
+<!---footer--->
+<!---footer--->
+
+<div class="bottom_nav ww"> <a class="bottom_nav1" href="../../../bangzhuzhongxin/bangzhuzhongxin.html" target="_blank"></a> <a class="bottom_nav2" href="../../../zizhi/zizhi.html" target="_blank"></a> <a class="bottom_nav3" href="ca/case/case.html" target="_blank"></a> <a class="bottom_nav4" href="../../changjianwenti.html" target="_blank"></a> <a class="bottom_nav5" href="../../../zaixianliuyan/zaixianliuyan.html" target="_blank"></a> </div>
+<div class="footer">
+  <div class="footer_m ww">
+    <div class="f_nav">
+      <ul>
+        <li name="/"><span><a title="" href="../../../../index.html" alt="网站首页">网站首页</a></span> </li>
+        
+        
+        <li name="/a/building/"><span><a title="营销型网站建设" href="../../../building/building.html" alt="营销型网站建设">营销型网站建设</a></span> </li>
+		
+        <li name="/a/visual/"><span><a title="整站优化排名" href="../../../visual/visual.html" alt="整站优化排名">整站优化排名</a></span> </li>
+		
+        <li name="/a/into/"><span><a title="关键词快速排名" href="../../../into/into.html" alt="关键词快速排名">关键词快速排名</a></span> </li>
+		
+        <li name="/a/case/"><span><a title="成功案例" href="../../../case/case.html" alt="成功案例">成功案例</a></span> </li>
+		
+        <li name="/a/plan/"><span><a title="营销方案" href="../../../plan/plan.html" alt="营销方案">营销方案</a></span> </li>
+		
+        <li name="/a/news/"><span><a title="新闻资讯" href="../../../news/news.html" alt="新闻资讯">新闻资讯</a></span> </li>
+		
+        <li name="/a/guanyuwomen/"><span><a title="关于我们" href="../../../guanyuwomen/guanyuwomen.html" alt="关于我们">关于我们</a></span> </li>
+		 
+      </ul>
+    </div>
+    <div class="f_con">
+      <div class="f_logo fl"> <img src="../../../../templets/default/demo/images/f_logo.png"/> </div>
+      <div class="f_copyright fl">
+        <p>2009-2017  科技  版权所有织梦模板</a>  <a href="http://www.miitbeian.gov.cn/">粤ICP备16027790号-1</a><br /></p>
+        <p>地址:深圳市宝安区松岗佳裕大厦1501-1502室(地铁11号线松岗C出口)</p>
+        <p>电话:0755-3690 6383  服务热线:400-660-7096</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="display: none" id="roll">
+  <div id="roll_top" title="回到顶部"></div>
+</div>
+<script type="text/javascript" src="../../../../templets/default/demo/js/rollup.js"></script> 
+<script type="text/javascript" src="../../../../templets/default/demo/js/float.js"></script> 
+<!---footer---> 
+<!---footer---> 
+</body>
+</html>
